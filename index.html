@@ -19,6 +19,14 @@
             mask-size: cover;
             background-color: #ffd700;
         }
+        .button-3d {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .button-3d:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
@@ -61,16 +69,8 @@
     <main class="flex-grow">
         <!-- Hero Section -->
         <section class="min-h-screen flex items-center justify-center p-6 text-center border-b border-gray-700 relative overflow-hidden">
-            <!-- Video Background -->
-            <div class="absolute inset-0 w-full h-full z-0">
-                <iframe 
-                    src="https://www.youtube.com/embed/QcNl_jJrW-4?&autoplay=1&mute=1&loop=1&playlist=QcNl_jJrW-4&controls=0&playsinline=1" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen 
-                    class="absolute inset-0 w-full h-full object-cover">
-                </iframe>
-            </div>
+            <!-- Image Background -->
+            <div class="absolute inset-0 w-full h-full z-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://img.freepik.com/fotos-premium/mujer-casco-realidad-virtual-ciudad-fondo-ia-generativa_797840-129.jpg');"></div>
             
             <!-- Overlay to improve text readability -->
             <div class="absolute inset-0 bg-black/60 z-10"></div>
@@ -84,10 +84,10 @@
                     Descubre una nueva dimensión con productos digitales innovadores y la última tecnología en electrodomésticos de realidad virtual.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
-                    <a href="#digital" class="bg-[#ffd700] text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 duration-300">
+                    <a href="#digital" class="button-3d bg-[#ffd700] text-gray-900 font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 duration-300">
                         Ver Productos Digitales
                     </a>
-                    <a href="#vr" class="border border-[#ffd700] text-[#ffd700] font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 duration-300">
+                    <a href="#vr" class="button-3d border border-[#ffd700] text-[#ffd700] font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 duration-300">
                         Ver Electrodomésticos VR
                     </a>
                 </div>
