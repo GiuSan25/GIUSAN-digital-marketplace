@@ -110,12 +110,33 @@
                 6px 6px 0px #777;
             margin-top: 1rem;
         }
+        
+        /* Animación de rotación para el texto GIUSAN */
+        @keyframes spin {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        .logo-spinning-text {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 
+                0 0 5px #ffd700,
+                0 0 10px #ffd700,
+                2px 2px 0px #333,
+                4px 4px 0px #555,
+                6px 6px 0px #777;
+            animation: spin 3s linear infinite;
+            margin-bottom: 2rem;
+            letter-spacing: 0.5rem;
+        }
     </style>
 </head>
 <body>
 
     <!-- Pantalla de carga -->
     <div id="loader" class="loader-container">
+        <span class="logo-spinning-text">GIUSAN</span>
         <span id="loading-text" class="loader-number-3d">0%</span>
     </div>
 
@@ -360,6 +381,7 @@
 
 </body>
 </html>
+
 
 
 
